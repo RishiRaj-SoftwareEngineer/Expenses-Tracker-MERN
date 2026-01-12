@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --font-display:"Poppins", "sans-serif";
+  --breakpoint-3xl: 1920px;
+  --color-primary:#875cf5;
+
+}
+
+@layer base{
+  html{
+    font-family: var(--font-display);
+  }
+  
+  body{
+    background-color:#fcfbfc;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #root{
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  label{
+    @apply block text-sm font-medium text-gray-800 mb-2;
+  }
+}
+
+.input-box{
+  @apply w-full flex items-center justify-between gap-2 px-4 py-3 bg-slate-100 border border-slate-200 rounded-lg text-sm text-gray-900 outline-none transition-all duration-200 focus-within:ring-2 focus-within:ring-violet-500/50 mb-6;
+}
+
+.input-box input{
+  @apply flex-1 bg-transparent outline-none text-gray-900 placeholder-gray-400;
+}
+
+.input-box input::placeholder{
+  @apply text-gray-400;
+}
+
+.btn-primary{
+  @apply w-full py-3 px-4 text-base font-semibold text-white bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg shadow-lg shadow-purple-500/30 transition-all duration-200 hover:shadow-xl hover:shadow-purple-500/40 active:scale-95 mb-4;
+}
+
+.card{
+  @apply bg-white rounded-lg shadow-gray-100 border border-gray-200/50;
+}
+
+.card-btn{
+  @apply flex items-center gap-3 text-[12px] font-medium text-gray-700 hover:text-purple-500 bg-gray-50 hover:bg-purple-50 px-4 py-1.5 rounded-lg border border-gray-200/50 cursor-pointer;
+}
