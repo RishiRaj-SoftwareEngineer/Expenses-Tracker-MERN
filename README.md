@@ -1,4 +1,4 @@
-# Expense Tracker App - Frontend
+# Expenses Tracker App - Frontend
 
 A modern React-based frontend for the Expense Tracker application built with Vite, Tailwind CSS, and Recharts.
 
